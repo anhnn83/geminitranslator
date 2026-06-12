@@ -6,10 +6,10 @@
 [![AI](https://img.shields.io/badge/AI-Gemini%202.5%20Flash%2FLite-8E75B2?style=for-the-badge&logo=googlebard&logoColor=white)](#)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-0078D6?style=for-the-badge&logo=windows&logoColor=white)](#)
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/anhnn83/gemini-translator)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/anhnn83/geminitranslator)
 
 > **Gemini Translator** là một ứng dụng Desktop siêu nhẹ được xây dựng trên nền tảng Tauri và sức mạnh của Google Gemini API. Ứng dụng cho phép bạn dịch văn bản bôi đen, trích xuất chữ từ ảnh chụp màn hình (OCR) và đặc biệt là tính năng phân tích mã nguồn/log lỗi hệ thống với tốc độ phản hồi cực nhanh, mọi lúc mọi nơi ngay trên màn hình của bạn.  
-> *Dự án được thiết kế tối ưu hóa cho trải nghiệm thao tác một chạm bằng phím tắt toàn cầu (Global Shortcuts) dành riêng cho developer.* 😁
+> *Dự án được thiết kế tối ưu hóa cho trải nghiệm thao tác một chạm bằng phím tắt toàn cầu (Global Shortcuts).*
 
 ---
 
@@ -21,7 +21,7 @@
 
 Dự án này là một "vũ khí bí mật" thay thế cho các ứng dụng từ điển hay công cụ dịch thuật cồng kềnh, giúp bạn tối ưu hóa hiệu suất làm việc bằng cách gắn kết trực tiếp AI vào mọi thao tác trên hệ điều hành.
 
-**🚀 Ưu điểm vượt trội**
+**🚀 Tính năng**
 
 * **Siêu nhẹ & Native:** Xây dựng bằng Rust (Tauri) thay vì Electron, giúp ứng dụng tiêu tốn cực ít bộ nhớ (RAM) và khởi động nền gần như tức thì.
 * **Dịch Văn Bản "1 Chạm":** Chỉ cần bôi đen bất kỳ đoạn text nào trên màn hình, bấm phím tắt, popup dịch thuật sẽ hiện ra ngay tại vị trí con trỏ chuột.
@@ -57,8 +57,8 @@ Thực hiện tuần tự theo các bước dưới đây để khởi chạy m�
 **Bước 3.1: Tải mã nguồn về máy**  
 Mở Terminal và chạy lệnh:
 ```bash
-git clone https://github.com/anhnn83/gemini-translator.git
-cd gemini-translator
+git clone https://github.com/anhnn83/geminitranslator.git
+cd geminitranslator
 ```
 
 **Bước 3.2: Cài đặt Dependencies**  
@@ -98,14 +98,16 @@ Rust sẽ thực hiện quá trình tối ưu hóa toàn diện (Release mode). 
 
 ## ☎️ 5. Đóng góp & Mã nguồn mở
 
-**Mọi đóng góp, tối ưu code, port sang Wayland (Linux) & báo lỗi đều được hoan nghênh tại kho lưu trữ chính thức!**
+**Mọi đóng góp, tối ưu code & báo lỗi đều được hoan nghênh tại kho lưu trữ chính thức!**
 
 **👨‍💻 Dev by ANHNN**
 
-[![GitHub](https://img.shields.io/badge/GitHub-anhnn83-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/anhnn83)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/anhnn83)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:anhnn@dgd.vn)
+[![website](https://img.shields.io/badge/Website-anhnn.cronpost.com-181717?style=for-the-badge&logo=google-chrome&logoColor=white)](https://anhnn.cronpost.com)
 
 <hr>
 <div align="center">
   &copy; 2026 <a href="https://github.com/anhnn83">anhnn</a>. Mọi quyền được bảo lưu.<br>
-  <b>Gemini Translator</b> được phát hành như một dự án mã nguồn mở.
+  <b>Gemini Translator</b> được phát hành dưới giấy phép <a href="LICENSE">GNU GPLv3</a>.
 </div>
