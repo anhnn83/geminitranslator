@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini Translator</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="settingsView" class="container">
+      <h2>⚙️ Settings</h2>
+      <div class="form-group">
+        <label for="apiKey">Gemini API Key:</label>
+        <input type="password" id="apiKey" placeholder="Enter your API Key here..." />
+      </div>
+      <div class="form-group">
+        <label for="targetLang">Target Language:</label>
+        <select id="targetLang">
+          <option value="Vietnamese" selected>Vietnamese</option>
+          <option value="English">English</option>
+          <option value="Chinese">Chinese</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="textShortcut">Text Translation Shortcut:</label>
+        <input type="text" id="textShortcut" placeholder="Click to record shortcut..." readonly class="shortcut-input text-shortcut" />
+      </div>
+      <div class="form-group">
+        <label for="imageShortcut">Image Translation Shortcut:</label>
+        <input type="text" id="imageShortcut" placeholder="Click to record shortcut..." readonly class="shortcut-input image-shortcut" />
+      </div>
+
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="autoStart" />
+        <label for="autoStart">Start with Windows/Linux</label>
+      </div>
+      <div class="form-group checkbox-group" style="margin-top: -5px;">
+        <input type="checkbox" id="analyzerMode" />
+        <label for="analyzerMode" style="color: #fbc531; font-weight: bold;">[Pro] Code/Terminal Analyzer Mode</label>
+      </div>
+      <hr />
+      <div class="actions">
+        <button id="saveBtn">Save Settings</button>
+        <button id="testApiBtn" class="secondary">Test API</button>
+        <button id="helpBtn" class="help-btn">Help</button>
+      </div>
+      <p id="statusMsg"></p>
+    </div>
+
+    <div id="helpModal" class="modal-overlay" style="display: none;">
+      <div class="modal-content">
+        <h3>🚀 How to use Gemini Translator</h3>
+        
+        <div class="help-section">
+          <h4>1. Get API Key</h4>
+          <p>Get your free Gemini API key from <a href="https://aistudio.google.com/" target="_blank">Google AI Studio</a>.</p>
+        </div>
+
+        <div class="help-section">
+          <h4>2. Text Translation</h4>
+          <p>Highlight any text on your screen, then press your configured <b>Text Shortcut</b>.</p>
+        </div>
+
+        <div class="help-section">
+          <h4>3. Image Translation (OCR)</h4>
+          <p>Press your OS screenshot shortcut (<code>Win+Shift+S</code> on Windows, or <code>Flameshot/Spectacle</code> on Linux) to capture a region to your clipboard. Then, press your configured <b>Image Shortcut</b>.</p>
+        </div>
+
+        <div class="help-section warning">
+          <h4>💡 Pro Tip: Prevent Disk Clutter</h4>
+          <p>Your OS might save every screenshot to your hard drive. To prevent this:<br>
+          - <b>Windows:</b> Open Snipping Tool settings -> Turn OFF "Automatically save screenshots".<br>
+          - <b>Linux:</b> Configure your screenshot tool to "Copy to Clipboard only" instead of saving to a file.</p>
+        </div>
+
+        <button id="closeHelpBtn" class="close-modal-btn">Got it!</button>
+      </div>
+    </div>
+
+    <div id="popupView" style="display: none; width: 100%;">
+      <div class="popup-header" data-tauri-drag-region>
+        <span class="popup-title" data-tauri-drag-region>Gemini Translate</span>
+        <div class="popup-controls">
+          <button class="popup-pin-btn pinned" id="pinBtn" title="Pin window">📌 Pinned</button>
+          <button class="popup-close-btn" id="closeBtn">X</button>
+        </div>
+      </div>
+      <div id="resultContent">⏳ Initializing...</div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

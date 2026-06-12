@@ -1,0 +1,144 @@
+/* src/styles.css --v2.1 */
+
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e24;
+  color: #f5f6fa;
+}
+body {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.container { width: 100%; max-width: 400px; }
+h2 { margin-top: 0; color: #00a8ff; }
+.form-group { margin-bottom: 15px; display: flex; flex-direction: column; }
+.checkbox-group { flex-direction: row; align-items: center; gap: 10px; }
+label { margin-bottom: 5px; font-weight: 500; }
+input[type="password"], select { padding: 10px; border-radius: 5px; border: 1px solid #353b48; background-color: #2f3640; color: white; outline: none; }
+input[type="password"]:focus, select:focus { border-color: #00a8ff; }
+hr { border: 1px solid #353b48; margin: 20px 0; }
+button { padding: 10px 15px; border: none; border-radius: 5px; background-color: #00a8ff; color: white; cursor: pointer; font-weight: bold; }
+button:hover { background-color: #0097e6; }
+button.secondary { background-color: #4cd137; }
+button.secondary:hover { background-color: #44bd32; }
+.actions { display: flex; gap: 10px; }
+#statusMsg { margin-top: 15px; font-size: 0.9em; color: #e1b12c; }
+
+/* CSS CHI TIẾT CHO POPUP */
+
+.popup-mode {
+  padding: 15px !important;
+  background-color: rgba(30, 30, 36, 0.97) !important;
+  border: 1px solid #00a8ff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important; 
+}
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #353b48;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  cursor: move;
+  user-select: none;
+  flex-shrink: 0;
+}
+.popup-title { color: #00a8ff; font-weight: bold; font-size: 14px; }
+.popup-controls { display: flex; gap: 12px; align-items: center; }
+.popup-mode #popupView {
+  display: flex !important; 
+}
+
+#popupView {
+  flex-direction: column;
+  height: 100%; 
+  width: 100%;
+  overflow: hidden; 
+}
+.popup-pin-btn {
+  background: #2f3640;
+  border: 1px solid #353b48;
+  color: #f5f6fa;
+  padding: 3px 8px;
+  font-size: 11px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.popup-pin-btn.pinned {
+  background: #00a8ff;
+  border-color: #00a8ff;
+  color: white;
+}
+
+.popup-close-btn { background: none; border: none; color: #e84118; cursor: pointer; font-weight: bold; font-size: 14px; }
+
+#resultContent { 
+  font-size: 14px; 
+  line-height: 1.6; 
+  white-space: pre-wrap; 
+  word-wrap: break-word; 
+  flex-grow: 1;
+  min-height: 0;
+  overflow-y: auto; 
+  padding-right: 5px;
+}
+#resultContent::-webkit-scrollbar { width: 5px; }
+#resultContent::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
+#resultContent::-webkit-scrollbar-thumb:hover { background: #00a8ff; }
+
+/* 🌟 UX CHO Ô NHẬP PHÍM TẮT */
+.shortcut-input {
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.text-shortcut { color: #00a8ff; }
+.image-shortcut { color: #4cd137; }
+
+/* Trạng thái đang "nghe" phím tắt */
+.shortcut-input.recording {
+  border-color: #fbc531 !important;
+  box-shadow: 0 0 8px rgba(251, 197, 49, 0.5);
+  background-color: #353b48 !important;
+  color: #fbc531 !important;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* 🌟 STYLE CHO HELP MODAL */
+.help-btn { background-color: #8c7ae6; }
+.help-btn:hover { background-color: #7158e2; }
+
+.modal-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: #2f3640; padding: 20px; border-radius: 8px;
+  width: 90%; max-width: 450px; border: 1px solid #353b48;
+}
+.modal-content h3 { color: #00a8ff; margin-top: 0; }
+.help-section { margin-bottom: 15px; font-size: 0.9em; line-height: 1.4; }
+.help-section h4 { margin: 0 0 5px 0; color: #f5f6fa; }
+.help-section p { margin: 0; color: #dcdde1; }
+.help-section a { color: #00a8ff; text-decoration: none; }
+.help-section.warning { border-left: 3px solid #fbc531; padding-left: 10px; }
+.help-section.warning h4 { color: #fbc531; }
+.close-modal-btn { width: 100%; margin-top: 15px; background-color: #353b48; }
+.close-modal-btn:hover { background-color: #e84118; }
