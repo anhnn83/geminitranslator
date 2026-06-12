@@ -4,11 +4,11 @@ setlocal enabledelayedexpansion
 :: ==========================================
 :: 1. CẤU HÌNH (Sửa VERSION ở đây khi cập nhật)
 :: ==========================================
-set VERSION=v0.1.0
+set VERSION=v0.1.1
 set REPO=anhnn83/geminitranslator
 
 echo ===================================================
-echo     GEMINI TRANSLATOR - PUSH + ROLLING RELEASE
+echo     GEMINI TRANSLATOR - PUSH AND ROLLING RELEASE
 echo     Phien ban hien tai: %VERSION%
 echo     Target: github.com/%REPO%/releases/tag/latest
 echo ===================================================
@@ -65,8 +65,3 @@ echo Link tai truc tiep luon luon la:
 echo https://github.com/%REPO%/releases/download/latest/%ZIP_NAME%
 echo ===================================================
 pause
-"""
-
-with open("upgit.bat", "w", encoding="utf-8") as f:
-    f.write(bat_content)
-print("File generated successfully")

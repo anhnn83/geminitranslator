@@ -1,0 +1,8 @@
+# Tự động chuẩn hóa kết thúc dòng cho tất cả các file văn bản thành LF khi đẩy lên Git
+* text=auto eol=lf
+
+# Chỉ định rõ ràng các file mã nguồn bắt buộc phải lưu dưới dạng LF
+*.rs text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.bat text eol=crlf
