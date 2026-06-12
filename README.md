@@ -7,6 +7,8 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-0078D6?style=for-the-badge&logo=windows&logoColor=white)](#)
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/anhnn83/geminitranslator)
+[![Latest Version (Windows)](https://img.shields.io/badge/-Latest%20Version-blue?style=for-the-badge)](https://github.com/anhnn83/geminitranslator/releases/download/latest/GeminiTranslator_latest.zip)
+
 
 > **Gemini Translator** là một ứng dụng Desktop siêu nhẹ được xây dựng trên nền tảng Tauri và sức mạnh của Google Gemini API. Ứng dụng cho phép bạn dịch văn bản bôi đen, trích xuất chữ từ ảnh chụp màn hình (OCR) và đặc biệt là tính năng phân tích mã nguồn/log lỗi hệ thống với tốc độ phản hồi cực nhanh, mọi lúc mọi nơi ngay trên màn hình của bạn.  
 > *Dự án được thiết kế tối ưu hóa cho trải nghiệm thao tác một chạm bằng phím tắt toàn cầu (Global Shortcuts).*
