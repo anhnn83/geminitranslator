@@ -117,13 +117,13 @@ fn handle_image_shortcut(handle: tauri::AppHandle) {
 
     #[cfg(target_os = "linux")]
     {
-        // Trên Linux: Dùng chuỗi lệnh bash tự động tìm công cụ chụp ảnh phù hợp
-        // Lệnh sẽ thử chạy flameshot, nếu không có sẽ tự nhảy sang gnome-screenshot, spectacle...
+        // Tối ưu hóa độc quyền cho Spectacle trên Parrot OS
+        // -r: Chế độ khoanh vùng | -b: Chạy ngầm không hiện giao diện chính | -c: Tự động copy vào Clipboard
         std::process::Command::new("sh")
             .arg("-c")
-            .arg("flameshot gui || gnome-screenshot -a -c || spectacle -r -c -b || mate-screenshot -a -c || xfce4-screenshooter -r -c")
+            .arg("spectacle -r -b -c")
             .spawn()
-            .expect("Lỗi: Không thể gọi bất kỳ công cụ chụp ảnh nào trên Linux");
+            .expect("Lỗi: Không thể gọi Spectacle trên Parrot OS");
     }
 
     // 🌟 Vòng lặp chờ Clipboard (Chạy chung cho cả 2 HDH)
